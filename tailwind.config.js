@@ -1,11 +1,10 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
-    mode: 'jit',
-    purge: [
+    content: [
         './src/**/*.html'
     ],
-    darkMode: false, // or 'media' or 'class'
+
     theme: {
         extend: {
             fontFamily: {
@@ -13,9 +12,7 @@ module.exports = {
             },
         },
     },
-    variants: {
-        extend: {},
-    },
+
     plugins: [
         require('@tailwindcss/forms'),
     ],
