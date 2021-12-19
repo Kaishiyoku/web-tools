@@ -6,3 +6,7 @@ mix
     .postCss('src/app.css', 'dist', [
         require('tailwindcss')('./tailwind.config.js'),
     ]);
+
+if (!mix.inProduction()) {
+    mix.disableSuccessNotifications();
+}
